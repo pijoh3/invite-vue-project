@@ -123,6 +123,11 @@
 <script setup>
 import dayjs from "dayjs"
 import 'dayjs/locale/ko'
+import "sakura-js/dist/sakura.min.css"
+import {Sakura} from "@/script/sakura.js" 
+
+new Sakura('body')
+
 dayjs.locale('ko')
 
 </script>
