@@ -1,11 +1,19 @@
 /* Font Family CDN */
 @import url('https: //cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css');
 @import url('https://fonts.cdnfonts.com/css/deluxe-edition-demo');
+@import url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.eot');
 
 @font-face {
     font-family: 'HANBatang';
     src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.eot');
     src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -21,7 +29,7 @@
     --white: #FFFFFF;
 
     /* Font Family */
-    --batang: '바탕', Batang;
+    --gowun-batang: 'GowunBatang-Regular';
     --nanum-gothic: 'NanumGothic', 'serif';
     --deluxe-edition: 'Deluxe Edition - Demo', sans-serif;
     --batang-hcr: 'HANBatang';

@@ -13,6 +13,7 @@
         <p>더 컨벤션 반포 2F 그랜드볼룸홀</p>
       </div>
     </div>
+    <!-- page-2 초대문구 -->
     <div class="container invite-text">
       <div class="content">
         <hr>
@@ -39,42 +40,86 @@
 
       </div>
     </div>
+    <!-- page-3 달력 -->
     <div class="container contact-calendar">
       <div class="contact">
         <div class="groom">
           <em style="color:var(--blue)">신랑</em>에게 연락하기
             <v-btn class="phone" href="tel:010-2944-6675" icon="mdi-phone"></v-btn>
-            <v-btn class="message" href="sms:010-2944-6675?body='축하드립니다.'" icon="mdi-message"></v-btn>
+            <v-btn class="message" href="sms:010-2944-6675" icon="mdi-message"></v-btn>
         </div>
         <div class="bride">
-          <a href=""><i></i></a>
-          <a href=""><i></i></a>
+         <em style="color:var(--pink)">신부</em>에게 연락하기
+              <v-btn class="phone" href="tel:010-5553-7373" icon="mdi-phone"></v-btn>
+              <v-btn class="message" href="sms:010-5553-7373" icon="mdi-message"></v-btn>
         </div>
       </div>
       <div class="calendar">
-        <div class="title">
-          <div class="month"></div>
-          <div class="day"></div>
-        </div>
-        <div class="content">
-          <div class="week"></div>
-          <div class="week"></div>
-          <div class="week"></div>
-          <div class="week"></div>
-          <div class="week"></div>
+        <div class="calendar-inner">
+          <div class="title">
+            <span class="month">11 November</span>
+            <span class="day">토. 오후 2시</span>
+          </div>
+          <hr/>
+          <div class="content">
+            <div class="week">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="normal">1</span>
+              <span class="normal">2</span>
+              <span class="normal">3</span>
+              <span class="normal">4</span>
+            </div>
+            <div class="week">
+              <span class="sunday">5</span>
+              <span class="normal">6</span>
+              <span class="normal">7</span>
+              <span class="normal">8</span>
+              <span class="normal">9</span>
+              <span class="normal">10</span>
+              <span class="normal">11</span>
+            </div>
+            <div class="week">
+              <span class="sunday">12</span>
+              <span class="normal">13</span>
+              <span class="normal">14</span>
+              <span class="normal">15</span>
+              <span class="normal">16</span>
+              <span class="normal">17</span>
+              <span class="d-day"><em></em></span>
+            </div>
+            <div class="week">
+              <span class="sunday">19</span>
+              <span class="normal">20</span>
+              <span class="normal">21</span>
+              <span class="normal">22</span>
+              <span class="normal">23</span>
+              <span class="normal">24</span>
+              <span class="normal">25</span>
+            </div>
+            <div class="week">
+              <span class="sunday">26</span>
+              <span class="normal">27</span>
+              <span class="normal">28</span>
+              <span class="normal">29</span>
+              <span class="normal">30</span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="day">
         <div class="timer">
-          <div class="title"></div>
-          <div class="time"></div>
         </div>
-        <h1></h1>
+        <h1>병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18 14:00:00').diff(dayjs(), 'day')}}일</em> 남았습니다.</h1>
       </div>
     </div> 
 </template>
 
 <script setup>
+import dayjs from "dayjs"
 
 </script>
 

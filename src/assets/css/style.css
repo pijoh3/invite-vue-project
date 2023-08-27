@@ -10,7 +10,7 @@
 
 /* page-1 메인페이지 */
 .main {
-    height: 100vh;
+    /* height: 100vh; */
 
     .header {
         padding: 10px 0 10px 20px;
@@ -19,12 +19,12 @@
     .header h1{
         border-left: 0.05em solid;
         padding: 0 0 0 9px;
-        font-family: var(--batang);
+        font-family: var(--gowun-batang);
         margin: 10px 0 10px 0;
     }
 
     .body {
-        height: 466px;
+        height: 420px;
         background-image: url('/src/assets/images/main.jpg');
         background-size: cover;
     }
@@ -40,11 +40,11 @@
     .footer {
         margin: 50px 10px 0 0;
         text-align: right;
-        font-family: var(--batang);
+        font-family: var(--gowun-batang);
     }
 
     .footer h1 {
-        margin: 0 0 40px 0;
+        margin: 0 0 30px 0;
     }
 
     .footer p {
@@ -52,12 +52,13 @@
     }
 }
 
+/* page-2 초대문구 */
 .invite-text {
-    height: 100vh;
+    /* height: 100vh; */
     
     .content {
         padding: 50px 0 0 0;
-         font-family: var(--batang);
+         font-family: var(--gowun-batang);
          text-align: center;
     }
 
@@ -67,7 +68,7 @@
     }
 
     .content h1 {
-        padding: 30px 0 30px 0 ;
+        padding: 30px 0 10px 0 ;
         font-size: 25px;
         color: var(--pink);
     }
@@ -82,38 +83,168 @@
     }
 
     .content .partner {
-        margin: 50px 0 0 0;
+        margin: 40px 0 0 0;
         font-size: 23px;
         font-weight: bold;
     }
 }
 
+/* page-2 달력 */
 .contact-calendar {
-    height: 100vh;
+    /* height: 100vh; */
 
     .contact {
+        font-family: var(--nanum-gothic);
+        font-size: 18px;
+        text-align: center;
+
+        .message {
+            width: 47px;
+            height: 47px;
+            background-color: var(--light-gray);
+            color: var(--white);
+    
+            .v-btn__overlay {
+                background-color: inherit;
+            }
+        }
+
+        .phone {
+            margin: 0 20px 0 20px;
+            width: 47px;
+            height: 47px;
+
+            opacity: 70%;
+            color: var(--white);
+
+            .v-btn__overlay {
+                background-color: inherit;
+            }
+        }
+
         .groom {
             padding: 20px 0 0 0;
+
+            .phone{
+                background-color: var(--blue);
+            }
+        }
+
+        .bride {
+            padding: 20px 0 0 0;
+            .phone {
+                background-color: var(--pink);
+            }
+        }
+    }
+    
+    .calendar {
+        margin: 30px 0 0 0;
+        height: 480px;
+        background-color: var(--light-pink);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .calendar-inner {
+            border-radius: 1%;
+            width: 90%;
+            height: 90%;
+            background-color: var(--white);
             font-family: var(--nanum-gothic);
             font-size: 18px;
-            text-align: center;
-            
-            .phone {
-                margin:0 20px 0 20px;
-                width: 47px;
-                height: 47px;
-                background-color: var(--blue);
-                opacity: 70%;
-                color: var(--white);
+
+            .title {
+                margin: 10px 20px 0 20px;
+                text-align: justify;
+                display:flex;
+                justify-content: space-between;
+
+                .month{
+                    color: var(--pink);
+                    line-height: 60px;
+                } 
+            }
+        }
+
+        .calendar-inner hr {
+            width: 90%;
+            background-color: var(--light-gray);
+        }
+
+        .content {
+
+            .week {
+                width:90%;
+                margin: 30px 0 30px 0;
+                display: flex;
+                justify-content: space-between;
             }
 
-            .message {
-                width: 47px;
-                height: 47px;
-                background-color: var(--light-gray);
+            .week span {
+                height: 40px;
+                display: inline-block;
+                flex: 1;
+                text-align: right;
+            }
+            
+            .normal {
+                color: var(--gray);
+            }
+
+            .sunday {
+                color: var(--red);
+            }
+
+            .d-day em {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: var(--pink);
+                border-radius: 50%;
+                transform: translate(35%,-20%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .d-day em::before {
+                content: '18';
                 color: var(--white);
             }
         }
     }
-  
+
+    .day {
+        margin-top: 20px;
+
+        .title {
+            text-align: center;
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .title span {
+            padding: 0 14px 0 14px;
+        }
+
+        .time {
+            margin: 10px 0 10px 0;
+            text-align: center;
+            font-size: 27px;
+            font-family: var(--gowun-batang);
+        }
+
+        .time em {
+            padding: 0 10px 0 10px;
+            font-size: 20px;
+        }
+    }
+
+    .day h1 {
+        text-align: center;
+        font-size: 18px;
+        font-family: var(--gowun-batang);
+    }
 }
