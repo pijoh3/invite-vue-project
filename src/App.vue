@@ -113,13 +113,15 @@
       <div class="day">
         <div class="timer">
         </div>
-        <h1>병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18 14:00:00').diff(dayjs(), 'day')}}일</em> 남았습니다.</h1>
+        <h1>병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day')}}일</em> 남았습니다.</h1>
       </div>
     </div> 
 </template>
 
 <script setup>
 import dayjs from "dayjs"
+import 'dayjs/locale/ko'
+dayjs.locale('ko')
 
 </script>
 
