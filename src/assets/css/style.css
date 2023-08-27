@@ -1,0 +1,119 @@
+@import url('/src/assets/css/variables.css');
+@import url('/src/assets/css/reset.css');
+
+.container {
+    position: relative;
+    border: 2px solid red;
+    width: 375px;
+    /* width: 100%; */
+}
+
+/* page-1 메인페이지 */
+.main {
+    height: 100vh;
+
+    .header {
+        padding: 10px 0 10px 20px;
+    }
+
+    .header h1{
+        border-left: 0.05em solid;
+        padding: 0 0 0 9px;
+        font-family: var(--batang);
+        margin: 10px 0 10px 0;
+    }
+
+    .body {
+        height: 466px;
+        background-image: url('/src/assets/images/main.jpg');
+        background-size: cover;
+    }
+
+    .body h1 {
+        font-family: var(--deluxe-edition);
+        font-size: 130px;
+        color: var(--light-pink);
+        position:absolute;
+        top: 560px;
+    }
+
+    .footer {
+        margin: 50px 10px 0 0;
+        text-align: right;
+        font-family: var(--batang);
+    }
+
+    .footer h1 {
+        margin: 0 0 40px 0;
+    }
+
+    .footer p {
+        margin: 0 0 0 0;
+    }
+}
+
+.invite-text {
+    height: 100vh;
+    
+    .content {
+        padding: 50px 0 0 0;
+         font-family: var(--batang);
+         text-align: center;
+    }
+
+    .content hr {
+        width: 80%;
+        background-color: var(--light-gray);
+    }
+
+    .content h1 {
+        padding: 30px 0 30px 0 ;
+        font-size: 25px;
+        color: var(--pink);
+    }
+
+    .message span p {
+        font-size: 20px;
+    }
+
+    .partner span p em {
+        font-size: 17px;
+        font-weight: 200;
+    }
+
+    .content .partner {
+        margin: 50px 0 0 0;
+        font-size: 23px;
+        font-weight: bold;
+    }
+}
+
+.contact-calendar {
+    height: 100vh;
+
+    .contact {
+        .groom {
+            padding: 20px 0 0 0;
+            font-family: var(--nanum-gothic);
+            font-size: 18px;
+            text-align: center;
+            
+            .phone {
+                margin:0 20px 0 20px;
+                width: 47px;
+                height: 47px;
+                background-color: var(--blue);
+                opacity: 70%;
+                color: var(--white);
+            }
+
+            .message {
+                width: 47px;
+                height: 47px;
+                background-color: var(--light-gray);
+                color: var(--white);
+            }
+        }
+    }
+  
+}

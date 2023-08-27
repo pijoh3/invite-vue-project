@@ -1,0 +1,28 @@
+/* Font Family CDN */
+@import url('https: //cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css');
+@import url('https://fonts.cdnfonts.com/css/deluxe-edition-demo');
+
+@font-face {
+    font-family: 'HANBatang';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.eot');
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/HANBatang.woff') format('woff');
+    font-style: normal;
+}
+
+:root {
+    /* Text Color */
+    --light-gray:#D9D9D9;
+    --gray: #909090;
+    --deep-gray: #9F9F9F;
+    --light-pink: #FFDFE1;
+    --blue: #4FA1BB;
+    --pink: #F58888;
+    --red: #BF0202;
+    --white: #FFFFFF;
+
+    /* Font Family */
+    --batang: '바탕', Batang;
+    --nanum-gothic: 'NanumGothic', 'serif';
+    --deluxe-edition: 'Deluxe Edition - Demo', sans-serif;
+    --batang-hcr: 'HANBatang';
+}
