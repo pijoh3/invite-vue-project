@@ -17,21 +17,23 @@
     <div class="container invite-text">
       <div class="content">
         <hr>
-        <h1>" 초대합니다 "</h1>
+        <h1 data-aos="fade-up">" 초대합니다 "</h1>
         <div class="message">
           <span>
-            <p>저희 두 사람이 사랑과 믿음으로</p>
-            <p>한 가정을 이루게 되었습니다.</p>
-            <p>바쁘시더라도 부디 오셔서</p>
-            <p>저희의 앞날을 축복해 주시고</p>
-            <p>격려해 주시면</p>
-            <p>더없는 기쁨이 되겠습니다.</p>
+            <p data-aos="fade-up">저희 두 사람이 사랑과 믿음으로</p>
+            <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
+            <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
+            <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
+            <p data-aos="fade-up">바쁘시더라도 부디 오셔서</p>
+            <p data-aos="fade-up">저희의 앞날을 축복해 주시고</p>
+            <p data-aos="fade-up">격려해 주시면</p>
+            <p data-aos="fade-up">더없는 기쁨이 되겠습니다.</p>
           </span>
         </div>
         <div class="partner">
           <span>
-            <p>박우범 · 이정순<em>의 차남</em> 병진</p>
-            <p>김기도 · 유현숙<em>의 장녀</em> 유진</p>
+            <p data-aos="fade-up">박우범 · 이정순<em>의 차남</em> 병진</p>
+            <p data-aos="fade-up">김기도 · 유현숙<em>의 장녀</em> 유진</p>
           </span>
         </div>
       </div>
@@ -43,26 +45,26 @@
     <!-- page-3 달력 -->
     <div class="container contact-calendar">
       <div class="contact">
-        <div class="groom">
+        <div class="groom" data-aos="fade-up">
           <em style="color:var(--blue)">신랑</em>에게 연락하기
             <v-btn class="phone" href="tel:010-2944-6675" icon="mdi-phone"></v-btn>
             <v-btn class="message" href="sms:010-2944-6675" icon="mdi-message"></v-btn>
         </div>
-        <div class="bride">
+        <div class="bride" data-aos="fade-up">
          <em style="color:var(--pink)">신부</em>에게 연락하기
               <v-btn class="phone" href="tel:010-5553-7373" icon="mdi-phone"></v-btn>
               <v-btn class="message" href="sms:010-5553-7373" icon="mdi-message"></v-btn>
         </div>
       </div>
-      <div class="calendar">
+      <div class="calendar" data-aos="fade-up">
         <div class="calendar-inner">
-          <div class="title">
+          <div class="title" data-aos="fade-up">
             <span class="month">11 November</span>
             <span class="day">토. 오후 2시</span>
           </div>
           <hr/>
           <div class="content">
-            <div class="week">
+            <div class="week" data-aos="fade-up">
               <span></span>
               <span></span>
               <span></span>
@@ -71,7 +73,7 @@
               <span class="normal">3</span>
               <span class="normal">4</span>
             </div>
-            <div class="week">
+            <div class="week" data-aos="fade-up">
               <span class="sunday">5</span>
               <span class="normal">6</span>
               <span class="normal">7</span>
@@ -80,7 +82,7 @@
               <span class="normal">10</span>
               <span class="normal">11</span>
             </div>
-            <div class="week">
+            <div class="week" data-aos="fade-up">
               <span class="sunday">12</span>
               <span class="normal">13</span>
               <span class="normal">14</span>
@@ -89,7 +91,7 @@
               <span class="normal">17</span>
               <span class="d-day"><em></em></span>
             </div>
-            <div class="week">
+            <div class="week" data-aos="fade-up">
               <span class="sunday">19</span>
               <span class="normal">20</span>
               <span class="normal">21</span>
@@ -98,7 +100,7 @@
               <span class="normal">24</span>
               <span class="normal">25</span>
             </div>
-            <div class="week">
+            <div class="week" data-aos="fade-up">
               <span class="sunday">26</span>
               <span class="normal">27</span>
               <span class="normal">28</span>
