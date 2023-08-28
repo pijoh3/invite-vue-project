@@ -22,8 +22,6 @@
           <span>
             <p data-aos="fade-up">저희 두 사람이 사랑과 믿음으로</p>
             <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
-            <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
-            <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
             <p data-aos="fade-up">바쁘시더라도 부디 오셔서</p>
             <p data-aos="fade-up">저희의 앞날을 축복해 주시고</p>
             <p data-aos="fade-up">격려해 주시면</p>
@@ -113,11 +111,36 @@
         </div>
       </div>
       <div class="day">
-        <div class="timer">
-        </div>
-        <h1>병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day')}}일</em> 남았습니다.</h1>
+        <h1>2023년 11월 18일 토요일 오후 2시</h1>
+        <h2>병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day')}}일</em> 남았습니다.</h2>
       </div>
-    </div> 
+    </div>
+     <!--page-4 갤러리 -->
+     <div class="container gallery">
+      <h1 data-aos="fade-up">Gallery</h1>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="@/assets/images/gallery/1.jpg" data-aos="fade-up"/>
+        </div>
+        <div class="grid-item">
+          <img src="@/assets/images/gallery/2.jpg" data-aos="fade-up"/>
+        </div>
+        <div class="grid-item">
+          <img src="@/assets/images/gallery/19.jpg" data-aos="fade-up"/>
+        </div>
+        <div class="grid-item">
+          <img src="@/assets/images/gallery/4.jpg" data-aos="fade-up"/>
+          <img src="@/assets/images/gallery/5.jpg" data-aos="fade-up"/>
+        </div>
+        <div class="grid-item">
+          <img src="@/assets/images/gallery/6.jpg" data-aos="fade-up"/>
+        </div>
+        <div class="grid-item">
+          <img src="@/assets/images/gallery/12.jpg" data-aos="fade-up"/>
+        </div>
+      </div>
+      <button>사진 더 보기</button> 
+     </div>
 </template>
 
 <script setup>

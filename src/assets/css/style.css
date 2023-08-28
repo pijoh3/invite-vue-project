@@ -89,7 +89,7 @@
     }
 }
 
-/* page-2 달력 */
+/* page-3 달력 */
 .contact-calendar {
     /* height: 100vh; */
 
@@ -244,7 +244,39 @@
 
     .day h1 {
         text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: var(--batang-hcr);
+    }
+
+    .day h2 {
+        text-align: center;
         font-size: 18px;
         font-family: var(--gowun-batang);
+    }
+}
+
+/* page-4 갤러리*/
+.gallery h1 {
+    margin-top: 30px;
+    font-size: 27px;
+    text-align: center;
+    font-family: var(--gowun-batang);
+    color: var(--pink);
+}
+.gallery {
+    height: 100vh;
+
+    .grid-container img {
+        border-radius: 5%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .grid-container {
+        margin: 0 20px 0 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
 }
