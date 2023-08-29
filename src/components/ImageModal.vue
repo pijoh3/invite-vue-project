@@ -18,5 +18,5 @@ defineExpose({open,close})
 </script>
 
 <style>
-@import '/src/assets/css/ImagePopup.css';
+@import '/src/assets/css/ImageModal.css';
 </style>
