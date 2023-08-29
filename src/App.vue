@@ -119,7 +119,7 @@
      <div class="container gallery">
       <h1 data-aos="fade-up">Gallery</h1>
       <div class="grid-container">
-        <div class="grid-item">
+        <div class="grid-item" @click="open">
           <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" data-aos="fade-up"/>
         </div>
         <div class="grid-item">
@@ -188,6 +188,9 @@
         <button class="showmore" @click="showMore"><v-icon icon="mdi-chevron-down"/> 사진 더 보기</button> 
       </div>
      </div>
+     <ImagePopup ref="popupRef">
+      <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" style="width:100%;"/>
+     </ImagePopup>
 </template>
 
 <script setup>
@@ -196,6 +199,7 @@ import 'dayjs/locale/ko'
 import "sakura-js/dist/sakura.min.css"
 import {Sakura} from "@/script/sakura.js" 
 import {ref, nextTick} from "vue"
+import ImagePopup from "@/components/ImagePopup.vue"
 
 // sakura.js(벚꽃 효과)
 new Sakura('body')
@@ -208,6 +212,10 @@ const showMore = () => {
   isShow.value = !isShow.value
   nextTick(()=> window.scrollTo({ top: document.documentElement.scrollTop+700, behavior: "smooth" }))
 }
+
+// 이미지 상세보기 팝업
+const popupRef = ref(null)
+const open = () => popupRef.value.open()
 </script>
 
 <style>
