@@ -111,8 +111,8 @@
         </div>
       </div>
       <div class="day">
-        <h1>2023년 11월 18일 토요일 오후 2시</h1>
-        <h2>병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day')}}일</em> 남았습니다.</h2>
+        <h1 data-aos="fade-up">2023년 11월 18일 토요일 오후 2시</h1>
+        <h2 data-aos="fade-up">병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day')}}일</em> 남았습니다.</h2>
       </div>
     </div>
      <!--page-4 갤러리 -->
@@ -120,26 +120,73 @@
       <h1 data-aos="fade-up">Gallery</h1>
       <div class="grid-container">
         <div class="grid-item">
-          <img src="@/assets/images/gallery/1.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" data-aos="fade-up"/>
         </div>
         <div class="grid-item">
-          <img src="@/assets/images/gallery/2.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/2.jpg" data-aos="fade-up"/>
         </div>
         <div class="grid-item">
-          <img src="@/assets/images/gallery/19.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up"/>
         </div>
         <div class="grid-item">
-          <img src="@/assets/images/gallery/4.jpg" data-aos="fade-up"/>
-          <img src="@/assets/images/gallery/5.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/4.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/5.jpg" data-aos="fade-up"/>
         </div>
         <div class="grid-item">
-          <img src="@/assets/images/gallery/6.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/17.jpg" data-aos="fade-up"/>
         </div>
         <div class="grid-item">
-          <img src="@/assets/images/gallery/12.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/12.jpg" data-aos="fade-up"/>
         </div>
+        <template v-if="isShow">
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/3.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/7.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/8.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/9.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/10.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/13.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/14.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/15.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/16.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/11.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/6.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/18.jpg" data-aos="fade-up"/>
+          </div>
+          <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up"/>
+          </div>
+            <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg" data-aos="fade-up"/>
+          </div>
+            <div class="grid-item">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg" data-aos="fade-up"/>
+          </div>
+        </template>
       </div>
-      <button>사진 더 보기</button> 
+      <div class="footer" v-if="!isShow">
+        <button class="showmore" @click="showMore"><v-icon icon="mdi-chevron-down"/> 사진 더 보기</button> 
+      </div>
      </div>
 </template>
 
@@ -148,11 +195,19 @@ import dayjs from "dayjs"
 import 'dayjs/locale/ko'
 import "sakura-js/dist/sakura.min.css"
 import {Sakura} from "@/script/sakura.js" 
+import {ref, nextTick} from "vue"
 
+// sakura.js(벚꽃 효과)
 new Sakura('body')
-
+// dayjs locale 지정
 dayjs.locale('ko')
 
+// 더보기 버튼 클릭
+const isShow = ref(false)
+const showMore = () => {
+  isShow.value = !isShow.value
+  nextTick(()=> window.scrollTo({ top: document.documentElement.scrollTop+700, behavior: "smooth" }))
+}
 </script>
 
 <style>

@@ -25,7 +25,7 @@
 
     .body {
         height: 420px;
-        background-image: url('/src/assets/images/main.jpg');
+        background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg');
         background-size: cover;
     }
 
@@ -278,5 +278,23 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
+    }
+
+    .footer {
+        margin-top: 10px;
+        text-align: center;
+
+        .showmore {
+            font-family: var(--nanum-gothic);
+            font-size: 13px;
+            color: var(--gray);
+            background-color: var(--white);
+            border-color: var(--gray);
+            border-radius: 30px;
+            padding: 5px 15px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid var(--gray);
+        }
     }
 }
