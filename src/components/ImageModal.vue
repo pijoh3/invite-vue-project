@@ -1,7 +1,7 @@
 <template>
     <div v-if="isShow" class="modal">
         <div class="overlay" @click="close"></div>
-        <div class="modal-card">
+        <div class="content">
             <slot />
         </div>
     </div>
