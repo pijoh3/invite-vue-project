@@ -8,6 +8,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const vuetify = createVuetify({
+    defaults: {
+        global: {
+            ripple: false
+        }
+    },
     components,
     directives,
     // v-icon font 설정

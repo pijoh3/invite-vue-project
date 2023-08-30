@@ -13,12 +13,14 @@
 
     .header {
         margin: 10px 0 10px 0;
-        height: 35px;
+        height: 40px;
         text-align: center;
+        display: inline;
         .close-btn {
             margin: 5px 10px 5px 0;
             position: absolute;
             right:0;
+            top:0;
             width: 1.3rem;
             height: 1.3rem;
             background: url('/src/assets/images/close.png') 50% 50% no-repeat;
@@ -26,7 +28,6 @@
     }
 
     .header h1 {
-        display: inline;
         font-size: 20px;
         font-family: var(--nanum-gothic);
         color: var(--white);
@@ -40,5 +41,9 @@
     .body {
         height: 100%;
         overflow: scroll;
+    }
+
+    .v-btn {
+        background-color: aquamarine;
     }
 }

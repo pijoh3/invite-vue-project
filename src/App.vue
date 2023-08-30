@@ -119,68 +119,68 @@
      <div class="container gallery">
       <h1 data-aos="fade-up">Gallery</h1>
       <div class="grid-container">
-        <div class="grid-item" @click="open">
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" data-aos="fade-up"/>
+        <div class="grid-item">
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" data-aos="fade-up" @click="open(0)"/>
         </div>
         <div class="grid-item">
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/2.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/2.jpg" data-aos="fade-up" @click="open(1)"/>
         </div>
         <div class="grid-item">
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up" @click="open(2)"/>
         </div>
         <div class="grid-item">
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/4.jpg" data-aos="fade-up"/>
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/5.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/4.jpg" data-aos="fade-up" @click="open(3)"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/5.jpg" data-aos="fade-up" @click="open(4)"/>
         </div>
         <div class="grid-item">
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/17.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/17.jpg" data-aos="fade-up" @click="open(5)"/>
         </div>
         <div class="grid-item">
-          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/12.jpg" data-aos="fade-up"/>
+          <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/12.jpg" data-aos="fade-up" @click="open(6)"/>
         </div>
         <template v-if="isShow">
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/3.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/3.jpg" data-aos="fade-up" @click="open(7)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/7.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/7.jpg" data-aos="fade-up" @click="open(8)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/8.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/8.jpg" data-aos="fade-up" @click="open(9)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/9.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/9.jpg" data-aos="fade-up" @click="open(10)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/10.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/10.jpg" data-aos="fade-up" @click="open(11)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/13.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/13.jpg" data-aos="fade-up" @click="open(12)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/14.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/14.jpg" data-aos="fade-up" @click="open(13)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/15.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/15.jpg" data-aos="fade-up" @click="open(14)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/16.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/16.jpg" data-aos="fade-up" @click="open(15)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/11.jpg" data-aos="fade-up"/>
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/6.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/11.jpg" data-aos="fade-up" @click="open(16)"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/6.jpg" data-aos="fade-up" @click="open(17)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/18.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/18.jpg" data-aos="fade-up" @click="open(18)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up" @click="open(19)"/>
           </div>
             <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg" data-aos="fade-up" @click="open(20)"/>
           </div>
             <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg" data-aos="fade-up"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg" data-aos="fade-up" @click="open(21)"/>
           </div>
         </template>
       </div>
@@ -188,7 +188,7 @@
         <button class="showmore" @click="showMore"><v-icon icon="mdi-chevron-down"/> 사진 더 보기</button> 
       </div>
      </div>
-     <ImagePopup ref="popupRef">
+     <ImagePopup ref="popupRef" v-model="idx">
       <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" style="width:100%;"/>
      </ImagePopup>
 </template>
@@ -215,7 +215,13 @@ const showMore = () => {
 
 // 이미지 상세보기 팝업
 const popupRef = ref(null)
-const open = () => popupRef.value.open()
+
+const open = index => {
+  idx.value = index
+  popupRef.value.open()
+}
+// 열리는 이미지 인덱스 정보
+const idx = ref(0)
 </script>
 
 <style>
