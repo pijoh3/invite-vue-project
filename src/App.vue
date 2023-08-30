@@ -188,9 +188,9 @@
         <button class="showmore" @click="showMore"><v-icon icon="mdi-chevron-down"/> 사진 더 보기</button> 
       </div>
      </div>
-     <ImageModal ref="popupRef">
+     <ImagePopup ref="popupRef">
       <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" style="width:100%;"/>
-     </ImageModal>
+     </ImagePopup>
 </template>
 
 <script setup>
@@ -199,7 +199,7 @@ import 'dayjs/locale/ko'
 import "sakura-js/dist/sakura.min.css"
 import {Sakura} from "@/script/sakura.js" 
 import {ref, nextTick} from "vue"
-import ImageModal from "@/components/ImageModal.vue"
+import ImagePopup from "@/components/ImagePopup.vue"
 
 // sakura.js(벚꽃 효과)
 new Sakura('body')
