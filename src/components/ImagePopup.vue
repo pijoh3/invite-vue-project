@@ -9,25 +9,36 @@
             <v-carousel hide-delimiters v-model="_modelValue">
                 <v-carousel-item :src="item" v-for="(item,idx) in src" :key="idx" />
             </v-carousel>
+            <div class="slider">
+                <div class="slider-item" v-for="(item, idx) in src" :key="idx" @click="moveSlide(idx)" :ref="el=> slideRef[idx] = el">
+                    <img :class="activeClass(idx)" :src="item" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import {ref, computed} from "vue"
+import {ref, computed, nextTick} from "vue"
 
 const props = defineProps(["modelValue"])
 const emit = defineEmits(["update:modelValue"])
 
 const _modelValue = computed({
-    get: ()=>props.modelValue,
-    set: value => emit("update:modelValue",value)
+    get: () => props.modelValue,
+    set: value => {
+        emit("update:modelValue",value)
+        // document.querySelector(".slider").scrollTo({ left: slideRef.value[value].getBoundingClientRect().left, behavior: "smooth" })
+    }
 })
 
 const isShow = ref(false)
 const open = () => {
     isShow.value = true
     document.body.style.overflow = "hidden"
+    nextTick(()=> {
+        document.querySelector(".slider").scrollTo({left: slideRef.value[_modelValue.value].getBoundingClientRect().left,behavior:"smooth"})
+    })
 }
 const close = () => {
     isShow.value = false
@@ -58,6 +69,14 @@ const src = ref(["https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg",
     "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg",
     "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg",
     "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg"])
+
+// 현재 인덱스인 경우 acitve
+const activeClass = computed(()=> index => index === _modelValue.value?"active":"")
+
+// 사진 클릭
+const moveSlide = value => _modelValue.value = value
+
+const slideRef = ref([])
 </script>
 
 <style>
