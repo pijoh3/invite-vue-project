@@ -11,8 +11,6 @@
 
 /* page-1 메인페이지 */
 .main {
-    /* height: 100vh; */
-
     .header {
         padding: 10px 0 10px 20px;
     }
@@ -55,8 +53,6 @@
 
 /* page-2 초대문구 */
 .invite-text {
-    /* height: 100vh; */
-    
     .content {
         padding: 50px 0 0 0;
          font-family: var(--gowun-batang);
@@ -92,8 +88,6 @@
 
 /* page-3 달력 */
 .contact-calendar {
-    /* height: 100vh; */
-
     .contact {
         font-family: var(--nanum-gothic);
         font-size: 18px;
@@ -266,8 +260,6 @@
     color: var(--pink);
 }
 .gallery {
-    height: 100vh;
-
     .grid-container img {
         border-radius: 5%;
         width: 100%;
@@ -303,4 +295,62 @@
             border: 1px solid var(--gray);
         }
     }
+}
+
+/* page-5 지도 */
+.location {
+    height: 100vh;
+    .title {
+        margin-top: 20px;
+        text-align: center;
+        font-family: var(--gowun-batang);
+
+        .main,
+        .sub {
+            margin-bottom: 0;
+        }
+
+        .main {
+            font-size: 27px;
+            color: var(--pink);
+        }
+
+        .sub {
+            font-size: 24px;
+            color: var(--gray);
+        }
+
+        .subtitle > p {
+            margin: 5px 0 5px 0;
+        }
+
+        .subtitle .sub-bold {
+            font-weight: bold;
+        }
+    }
+
+    .map-navbar {
+        width: 100%;
+        height: 3rem;
+        background-color: var(--light-gray);
+    
+        .navbar-item {
+            font-size: 17px;
+            font-family: var(--nanum-gothic);
+            height: 3rem;
+        }
+
+        .navbar-item > img {
+            margin: 0 5px 0 5px;
+            width: 30px;
+            height: 30px;
+            transform: translateY(8px);
+        }
+
+        .bar::after {
+            content: '|';
+            color: var(--gray);
+        }
+    }
+
 }

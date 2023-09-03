@@ -188,6 +188,38 @@
         <button class="showmore" @click="showMore"><v-icon icon="mdi-chevron-down"/> 사진 더 보기</button> 
       </div>
      </div>
+     <!--page-5 지도 -->
+     <div class="container location">
+      <div class="title">
+        <h1 class="main" data-aos="fade-up">LOCATION</h1>
+        <h1 class="sub" data-aos="fade-up">오시는 길</h1>
+        <div class="subtitle">
+          <p class="sub-bold" data-aos="fade-up">더컨벤션 반포 2F 그랜드볼룸홀</p>
+          <p data-aos="fade-up">서울 서초구 사평대로 108</p>
+          <p data-aos="fade-up">(서울시 서초구 반포동 107-3)</p>
+        </div>
+      </div>
+      <div class="map">
+        <!-- 네이버 지도 연동부분 -->
+        <div id="map"  style="width: 100%; height: 300px; margin:auto"></div>
+        <div class="map-navbar">
+          <a class="navbar-item bar" href="https://map.naver.com/p/search/%EB%8D%94%EC%BB%A8%EB%B2%A4%EC%85%98%20%EB%B0%98%ED%8F%AC/place/1831004045?c=15.00,0,0,0,dh&isCorrectAnswer=true">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/naver.webp">네이버 지도
+          </a>
+          <a class="navbar-item bar" :href="encodeURI('https://map.kakao.com/link/to/더컨벤션 반포점,37.49846066693337,126.99587826519081')">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/kakao.svg">카카오 내비
+          </a>
+          <a class="navbar-item" :href="encodeURI('https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx7179ddde21ca4bfb8e6b03c710138f41&name=더컨벤션 반포점&lon=37.49846066693337&lat=126.99587826519081')">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/tmap.svg">티맵
+          </a>
+        </div>
+      </div>
+      <ul class="guide">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+     </div>
      <ImagePopup ref="popupRef" v-model="idx">
       <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" style="width:100%;"/>
      </ImagePopup>
@@ -198,13 +230,34 @@ import dayjs from "dayjs"
 import 'dayjs/locale/ko'
 import "sakura-js/dist/sakura.min.css"
 import {Sakura} from "@/script/sakura.js" 
-import {ref, nextTick} from "vue"
+import {ref, nextTick, onMounted} from "vue"
 import ImagePopup from "@/components/ImagePopup.vue"
 
 // sakura.js(벚꽃 효과)
 new Sakura('body')
 // dayjs locale 지정
 dayjs.locale('ko')
+
+// 네이버 지도 연동
+onMounted(() => {
+  const script = document.createElement("script")
+  script.src = "https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bttz51t9w7"
+  script.async = true
+  script.defer = true
+  document.head.appendChild(script)
+
+  script.onload = () => {
+    const map = new window.naver.maps.Map("map", {
+      center: new window.naver.maps.LatLng(37.49846066693337, 126.99587826519081),
+      zoom: 15
+    })
+
+    new window.naver.maps.Marker({
+      position: new window.naver.maps.LatLng(37.49846066693337, 126.99587826519081),
+      map: map
+    })
+  }
+})
 
 // 더보기 버튼 클릭
 const isShow = ref(false)
