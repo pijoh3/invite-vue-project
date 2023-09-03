@@ -245,8 +245,87 @@
             </span>
         </li>
         <hr data-aos="fade-up"/>
-
       </ul>
+     </div>
+     <!--page-6 안내/계좌/공유하기 -->
+     <div class="container info">
+      <div class="event-info">
+        <div class="title" data-aos="fade-up">
+          신랑측 피로연 안내
+        </div>
+        <div class="content">
+          <p data-aos="fade-up">예식에 참석하기 어려운 분들을 위해</p>
+          <p data-aos="fade-up">작은 피로연 자리를 마련하였습니다.</p>
+          <p data-aos="fade-up">고성대웅뷔페 4층</p>
+          <p data-aos="fade-up">(경남고성군 동외리 156번길31)</p>
+          <button class="event-btn" @click="moveEventMap" data-aos="fade-up">피로연장 지도보기</button>
+        </div>
+      </div>
+      <div class="account">
+        <!-- Flowers Png vectors by Lovepik.com -->
+        <h1><img class="icon" src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/flower.png" />마음 전하실 곳</h1>
+        <div class="accordion">
+          <v-expansion-panels>
+            <v-expansion-panel title="신랑측 계좌번호">
+              <v-expansion-panel-text>
+                <div class="account-info">
+                  <p>국민 | 293802-01-220887
+                    <button class="copy-btn" @click="copyAccount('29380201220887')">복사<v-icon icon="mdi-content-copy" /></button>
+                  </p>
+                  <p><em>신랑</em> 박 병 진</p>
+                </div>
+              </v-expansion-panel-text>
+              <v-expansion-panel-text>
+                <div class="account-info">
+                    <p>농협 | 849-02-397853
+                      <button class="copy-btn" @click="copyAccount('84902397853')">복사<v-icon icon="mdi-content-copy" /></button>
+                    </p>
+                    <p><em>신랑 아버님</em> 박 우 범</p>
+                  </div>
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
+          <br/>
+          <v-expansion-panels>
+            <v-expansion-panel title="신부측 계좌번호">
+              <v-expansion-panel-text>
+                <div class="account-info">
+                    <p>케이뱅크 | 100-170-250076
+                      <button class="copy-btn" @click="copyAccount('100170250076')">복사<v-icon icon="mdi-content-copy" /></button>
+                    </p>
+                    <p><em>신부</em> 김 유 진</p>
+                  </div>
+              </v-expansion-panel-text>
+              <v-expansion-panel-text>
+                <div class="account-info">
+                    <p>신한 | 559-04-101253
+                      <button class="copy-btn" @click="copyAccount('55904101253')">복사<v-icon icon="mdi-content-copy" /></button>
+                    </p>
+                    <p><em>신부 아버님</em> 김 기 도</p>
+                  </div>
+              </v-expansion-panel-text>
+              <v-expansion-panel-text>
+                <div class="account-info">
+                    <p>농협 | 750-02-015578
+                      <button class="copy-btn" @click="copyAccount('75002015578')">복사<v-icon icon="mdi-content-copy" /></button>
+                    </p>
+                    <p><em>신부 어머님</em> 유 현 숙</p>
+                  </div>
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </div>
+      </div>
+      <div class="share">
+        <ul>
+          <li class="kakao">
+            <button class="kakao-btn" @click="sendKakao"></button><span>카카오톡 공유하기</span>
+          </li>
+          <li class="link">
+            <v-btn icon="mdi-link" color="#757575" class="link-btn" @click="copyAccount('http://pijoh3.github.io')"/><span>링크 복사하기</span>
+          </li>
+        </ul>
+      </div>
      </div>
      <ImagePopup ref="popupRef" v-model="idx">
       <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" style="width:100%;"/>
@@ -303,6 +382,32 @@ const open = index => {
 }
 // 열리는 이미지 인덱스 정보
 const idx = ref(0)
+
+// 피로연장 지도 이동
+const moveEventMap = () => window.location.href = "https://map.naver.com/p/search/%EA%B3%A0%EC%84%B1%EB%8C%80%EC%9B%85%EC%98%88%EC%8B%9D%EC%9E%A5/place/13352789?c=15.00,0,0,0,dh&isCorrectAnswer=true"
+
+// 계좌 복사 함수
+const copyAccount = account => navigator.clipboard.writeText(account).then(()=>alert("계좌번호가 복사되었습니다."))
+
+// 카카오 공유하기
+// init 체크
+if (!window.Kakao.isInitialized()) {
+  window.Kakao.init('c56dc593c7d7c81333fecf5576b04fb2');
+}
+
+var sendKakao = function () {
+  // 메시지 공유 함수
+  window.Kakao.Link.sendScrap({
+    requestUrl: 'http://pijoh3.github.io', // 페이지 url
+    templateId: 98011, // 메시지템플릿 번호
+    templateArgs: {
+      PROFILE: 'https://cdn.jsdelivr.net/gh/pijoh3/invite-image/8.jpg', // 프로필 이미지 주소 ${PROFILE}
+      THUMB: 'http://pijoh3.github.io', // 썸네일 주소 ${THUMB}
+      TITLE: '병진♥유진 결혼식에 초대합니다.', // 제목 텍스트 ${TITLE}
+      DESC: '2023년 11월 18일 오후 2시', // 설명 텍스트 ${DESC}
+    },
+  });
+};
 </script>
 
 <style>
