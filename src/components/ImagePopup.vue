@@ -28,7 +28,7 @@ const _modelValue = computed({
     get: () => props.modelValue,
     set: value => {
         emit("update:modelValue",value)
-        // document.querySelector(".slider").scrollTo({ left: slideRef.value[value].getBoundingClientRect().left, behavior: "smooth" })
+        slideRef.value[value].scrollIntoView({inline:"start",behavior:"smooth"})
     }
 })
 
