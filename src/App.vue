@@ -413,6 +413,8 @@ const shareLink = () => !!navigator.share({
   url:"http://pijoh3.github.io",
   text: "2023년 11월 18일 오후 2시",
   title:"병진♥유진 결혼식에 초대합니다."})
+    .then(()=>alert("해당 링크를 공유하였습니다."))
+    .catch((error)=>alert("해당 링크 공유에 실패하였습니다."))
 </script>
 
 <style>
