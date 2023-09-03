@@ -206,18 +206,46 @@
           <a class="navbar-item bar" href="https://map.naver.com/p/search/%EB%8D%94%EC%BB%A8%EB%B2%A4%EC%85%98%20%EB%B0%98%ED%8F%AC/place/1831004045?c=15.00,0,0,0,dh&isCorrectAnswer=true">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/naver.webp">네이버 지도
           </a>
-          <a class="navbar-item bar" :href="encodeURI('https://map.kakao.com/link/to/더컨벤션 반포점,37.49846066693337,126.99587826519081')">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/kakao.svg">카카오 내비
+          <a class="navbar-item bar" href="https://map.kakao.com/link/map/더컨벤션반포점,37.49846066693337,126.99587826519081">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/kakao.svg">카카오맵
           </a>
-          <a class="navbar-item" :href="encodeURI('https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx7179ddde21ca4bfb8e6b03c710138f41&name=더컨벤션 반포점&lon=37.49846066693337&lat=126.99587826519081')">
+          <a class="navbar-item" href="https://surl.tmobiapi.com/4e182bea">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/tmap.svg">티맵
           </a>
         </div>
       </div>
       <ul class="guide">
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+            <v-btn icon="mdi-train" disabled data-aos="fade-up"/>
+            <span class="guide-text">
+              <p class="guide-title" data-aos="fade-up">지하철</p>
+              <p data-aos="fade-up">[3호선] 고속터미널역 5번 출구</p>
+              <p data-aos="fade-up">[9호선] 신반포역 4번 출구</p>
+              <p data-aos="fade-up">(반포종합운동장 방향 도보 7분)</p>
+            </span>
+        </li>
+        <hr data-aos="fade-up"/>
+        <li>
+          <v-btn icon="mdi-bus" disabled data-aos="fade-up"/>
+            <span class="guide-text">
+              <p class="guide-title" data-aos="fade-up">버스</p>
+              <p data-aos="fade-up">간선 142</p>
+              <p data-aos="fade-up">마을 서초10 / 서초14 / 서초21</p>
+              <p data-aos="fade-up">(반포종합운동장 하차)</p>
+            </span>
+        </li>
+        <hr data-aos="fade-up"/>
+        <li>
+          <v-btn icon="mdi-parking" disabled data-aos="fade-up"/>
+            <span class="guide-text">
+              <p class="guide-title" data-aos="fade-up">주차</p>
+              <p data-aos="fade-up">무료주차 2시간</p>
+              <p data-aos="fade-up">건물 내 만차시 외부 주차장 안내</p>
+              <p data-aos="fade-up">(도보 10분)</p>
+            </span>
+        </li>
+        <hr data-aos="fade-up"/>
+
       </ul>
      </div>
      <ImagePopup ref="popupRef" v-model="idx">
