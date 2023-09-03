@@ -322,7 +322,7 @@
             <button class="kakao-btn" @click="sendKakao"></button><span>카카오톡 공유하기</span>
           </li>
           <li class="link">
-            <v-btn icon="mdi-link" color="#757575" class="link-btn" @click="copyAccount('http://pijoh3.github.io')"/><span>링크 복사하기</span>
+            <v-btn icon="mdi-link" color="#757575" class="link-btn" @click="shareLink"/><span>링크 복사하기</span>
           </li>
         </ul>
       </div>
@@ -408,6 +408,11 @@ var sendKakao = function () {
     },
   });
 };
+
+const shareLink = () => !!navigator.share({
+  url:"http://pijoh3.github.io",
+  text: "2023년 11월 18일 오후 2시",
+  title:"병진♥유진 결혼식에 초대합니다."})
 </script>
 
 <style>
