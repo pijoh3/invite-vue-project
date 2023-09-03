@@ -6,7 +6,7 @@
         </div>
         <hr />
         <div class="body">
-            <v-carousel hide-delimiters v-model="_modelValue">
+            <v-carousel height="400px" hide-delimiters v-model="_modelValue">
                 <v-carousel-item :src="item" v-for="(item,idx) in src" :key="idx" />
             </v-carousel>
             <div class="slider">

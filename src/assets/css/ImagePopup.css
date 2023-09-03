@@ -4,7 +4,7 @@
 
 .popup-layout {
     width: 100%;
-    /* height: inherit; */
+    height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
@@ -67,8 +67,9 @@
 }
 
 .slider-item {
-    padding: 10px 5px 10px 5px;
+    padding: 30px 5px 10px 5px;
     width: 20%;
+    height: 130px;
     flex-shrink: 0;
     scroll-snap-align: start;
     /* latest (Chrome 69+) */

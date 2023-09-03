@@ -4,7 +4,7 @@
 html,
 body {
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
     margin: 0;
 }
 
@@ -428,9 +428,10 @@ body {
         .accordion {
             width: 85%;
             margin: auto;
+            font-weight: 0.8rem;
             .account-info > p > em {
                 font-weight: bold;
-                font-size: 18px;
+                font-size: 1rem;
                 margin-right: 10px;
             }
 
