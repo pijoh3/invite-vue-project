@@ -1,14 +1,17 @@
 <template>
     <div v-if="isShow" class="popup-layout">
         <div class="header">
-            <h1>갤러리</h1>
             <button class="close-btn" @click="close"/>
         </div>
-        <hr />
         <div class="body">
-            <v-carousel height="400px" hide-delimiters v-model="_modelValue">
-                <v-carousel-item :src="item" v-for="(item,idx) in src" :key="idx" />
-            </v-carousel>
+            <Carousel :items-to-show="1" v-model="_modelValue">
+                <Slide v-for="(item, idx) in src" :key="idx">
+                    <img :src="item" style="width:80%;">
+                </Slide>
+                <template #addons>
+                    <navigation />
+                </template>
+            </Carousel>
             <div class="slider">
                 <div class="slider-item" v-for="(item, idx) in src" :key="idx" @click="moveSlide(idx)" :ref="el=> slideRef[idx] = el">
                     <img :class="activeClass(idx)" :src="item" />
@@ -20,6 +23,8 @@
 
 <script setup>
 import {ref, computed, nextTick} from "vue"
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 const props = defineProps(["modelValue"])
 const emit = defineEmits(["update:modelValue"])
