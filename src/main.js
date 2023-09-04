@@ -4,22 +4,27 @@ import {createVuetify} from "vuetify"
 import * as components from "vuetify/components"
 import * as directives from "vuetify/directives"
 import "@mdi/font/css/materialdesignicons.css";
+import { aliases, mdi } from "vuetify/iconsets/mdi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const vuetify = createVuetify({
-    defaults: {
-        global: {
-            ripple: false
-        }
+  defaults: {
+    global: {
+      ripple: false,
     },
-    components,
-    directives,
-    // v-icon font 설정
-    icons: {
-        defaultSet: 'mdi'
-    }
-})
+  },
+  components,
+  directives,
+  // v-icon font 설정
+  icons: {
+    defaultSet: "mdi",
+    aliases,
+    sets: {
+      mdi,
+    },
+  },
+});
 
 AOS.init({duration: 1500});
 createApp(App).use(vuetify).mount("#app");

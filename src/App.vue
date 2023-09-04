@@ -1,5 +1,6 @@
 <template>
-    <!-- page-1 메인페이지 -->
+  <div>
+  <!-- page-1 메인페이지 -->
     <div class="container main">
       <div class="header">
         <h1>11<br/>月<br/>18<br/>日</h1>
@@ -49,7 +50,7 @@
             <v-btn class="message" href="sms:010-2944-6675" icon="mdi-message"></v-btn>
         </div>
         <div class="bride" data-aos="fade-up">
-         <em style="color:var(--pink)">신부</em>에게 연락하기
+          <em style="color:var(--pink)">신부</em>에게 연락하기
               <v-btn class="phone" href="tel:010-5553-7373" icon="mdi-phone"></v-btn>
               <v-btn class="message" href="sms:010-5553-7373" icon="mdi-message"></v-btn>
         </div>
@@ -112,11 +113,11 @@
       </div>
       <div class="day">
         <h1 data-aos="fade-up">2023년 11월 18일 토요일 오후 2시</h1>
-        <h2 data-aos="fade-up">병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day')}}일</em> 남았습니다.</h2>
+        <h2 data-aos="fade-up">병진<em style="color:var(--pink)">♥</em>유진의 결혼식이 <em style="color:var(--pink)">{{ dayjs('2023-11-18').diff(dayjs().format('YYYY-MM-DD'), 'day') }}일</em> 남았습니다.</h2>
       </div>
     </div>
-     <!--page-4 갤러리 -->
-     <div class="container gallery">
+      <!--page-4 갤러리 -->
+      <div class="container gallery">
       <h1 data-aos="fade-up">Gallery</h1>
       <div class="grid-container">
         <div class="grid-item">
@@ -187,9 +188,9 @@
       <div class="footer" v-if="!isShow">
         <button class="showmore" @click="showMore"><v-icon icon="mdi-chevron-down"/> 사진 더 보기</button> 
       </div>
-     </div>
-     <!--page-5 지도 -->
-     <div class="container location">
+      </div>
+      <!--page-5 지도 -->
+      <div class="container location">
       <div class="title">
         <h1 class="main" data-aos="fade-up">LOCATION</h1>
         <h1 class="sub" data-aos="fade-up">오시는 길</h1>
@@ -251,9 +252,9 @@
         </li>
         <hr data-aos="fade-up"/>
       </ul>
-     </div>
-     <!--page-6 안내/계좌/공유하기 -->
-     <div class="container info">
+      </div>
+      <!--page-6 안내/계좌/공유하기 -->
+      <div class="container info">
       <div class="event-info">
         <div class="title" data-aos="fade-up">
           신랑측 피로연 안내
@@ -271,60 +272,59 @@
         <!-- Flowers Png vectors by Lovepik.com -->
         <h1><img class="icon" src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/flower.png" />마음 전하실 곳</h1>
         <div class="accordion">
-          <AccordionItem>
-            <template #summary>신랑측 계좌번호</template>
-            <template #icon>></template>
-            
-          </AccordionItem>
-          <v-expansion-panels>
-            <v-expansion-panel title="신랑측 계좌번호">
-              <v-expansion-panel-text>
+          <!-- 신랑측 -->
+          <AccordionList>
+            <AccordionItem default-opened>
+              <template #summary>신랑측 계좌번호</template>
+              <template #icon>
+                <em style="display: none;">|</em>
+                <v-icon icon="mdi-chevron-down" />
+              </template>
+              <div class="account-info">
+                <p>국민 | 293802-01-220887
+                  <button class="copy-btn" @click="copyAccount('29380201220887')"><v-icon icon="mdi-content-copy" /></button>
+                </p>
+                <p><em>신랑</em> 박 병 진</p>
+              </div>
+              <hr/>
+              <div class="account-info">
+                <p>농협 | 849-02-397853
+                  <button class="copy-btn" @click="copyAccount('84902397853')"><v-icon icon="mdi-content-copy" /></button>
+                </p>
+                <p><em>신랑 아버님</em> 박 우 범</p>
+              </div>
+            </AccordionItem>
+          </AccordionList>
+        
+          <!-- 신부측 -->
+          <AccordionList>
+            <AccordionItem default-opened>
+              <template #summary>신부측 계좌번호</template>
+              <template #icon><em style="display: none;">|</em>
+                <v-icon icon="mdi-chevron-down" />
+              </template>
                 <div class="account-info">
-                  <p>국민 | 293802-01-220887
-                    <button class="copy-btn" @click="copyAccount('29380201220887')">복사<v-icon icon="mdi-content-copy" /></button>
+                  <p>케이뱅크 | 100-170-250076
+                    <button class="copy-btn" @click="copyAccount('100170250076')"><v-icon icon="mdi-content-copy" /></button>
                   </p>
-                  <p><em>신랑</em> 박 병 진</p>
+                  <p><em>신부</em> 김 유 진</p>
                 </div>
-              </v-expansion-panel-text>
-              <v-expansion-panel-text>
+                <hr/>
                 <div class="account-info">
-                    <p>농협 | 849-02-397853
-                      <button class="copy-btn" @click="copyAccount('84902397853')">복사<v-icon icon="mdi-content-copy" /></button>
-                    </p>
-                    <p><em>신랑 아버님</em> 박 우 범</p>
-                  </div>
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-          </v-expansion-panels>
-          <br/>
-          <v-expansion-panels>
-            <v-expansion-panel title="신부측 계좌번호">
-              <v-expansion-panel-text>
+                  <p>신한 | 559-04-101253
+                    <button class="copy-btn" @click="copyAccount('55904101253')"><v-icon icon="mdi-content-copy" /></button>
+                  </p>
+                  <p><em>신부 아버님</em> 김 기 도</p>
+                </div>
+                <hr/>
                 <div class="account-info">
-                    <p>케이뱅크 | 100-170-250076
-                      <button class="copy-btn" @click="copyAccount('100170250076')">복사<v-icon icon="mdi-content-copy" /></button>
-                    </p>
-                    <p><em>신부</em> 김 유 진</p>
-                  </div>
-              </v-expansion-panel-text>
-              <v-expansion-panel-text>
-                <div class="account-info">
-                    <p>신한 | 559-04-101253
-                      <button class="copy-btn" @click="copyAccount('55904101253')">복사<v-icon icon="mdi-content-copy" /></button>
-                    </p>
-                    <p><em>신부 아버님</em> 김 기 도</p>
-                  </div>
-              </v-expansion-panel-text>
-              <v-expansion-panel-text>
-                <div class="account-info">
-                    <p>농협 | 750-02-015578
-                      <button class="copy-btn" @click="copyAccount('75002015578')">복사<v-icon icon="mdi-content-copy" /></button>
-                    </p>
-                    <p><em>신부 어머님</em> 유 현 숙</p>
-                  </div>
-              </v-expansion-panel-text>
-            </v-expansion-panel>
-          </v-expansion-panels>
+                  <p>농협 | 750-02-015578
+                    <button class="copy-btn" @click="copyAccount('75002015578')"><v-icon icon="mdi-content-copy" /></button>
+                  </p>
+                  <p><em>신부 어머님</em> 유 현 숙</p>
+                </div>
+            </AccordionItem>
+          </AccordionList>
         </div>
       </div>
       <div class="share">
@@ -333,11 +333,12 @@
             <button class="kakao-btn" @click="sendKakao"></button><span>카카오톡 공유하기</span>
           </li>
           <li class="link">
-            <v-btn icon="mdi-link" color="#757575" class="link-btn" @click="shareLink"/><span>링크 복사하기</span>
+            <v-btn icon="mdi-share-variant" color="#757575" class="link-btn" @click="shareLink"/><span>링크 복사하기</span>
           </li>
         </ul>
       </div>
-     </div>
+      </div>
+  </div>
      <ImagePopup ref="popupRef" v-model="idx">
       <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg" style="width:100%;"/>
      </ImagePopup>
@@ -350,6 +351,8 @@ import "sakura-js/dist/sakura.min.css"
 import {Sakura} from "@/script/sakura.js" 
 import {ref, nextTick, onMounted} from "vue"
 import ImagePopup from "@/components/ImagePopup.vue"
+import { AccordionList, AccordionItem } from "vue3-rich-accordion";
+import "vue3-rich-accordion/accordion-library-styles.css";
 
 // sakura.js(벚꽃 효과)
 new Sakura('body')
