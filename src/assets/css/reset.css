@@ -32,3 +32,15 @@ button {
 li {
     list-style-type: none;
 }
+
+ul,
+ol,
+li,
+a,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}

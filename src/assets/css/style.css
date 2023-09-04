@@ -361,14 +361,19 @@ body {
     }
 
     .guide > li {
+        margin-top: 20px;
         display: inline-flex;
         align-items: center;
         .guide-text {
             margin-left: 2rem;
             font-family: var(--batang-hcr);
-            font-size: 1rem;
+            font-size: 1.1rem;
             .guide-title {
                 font-weight: bold;
+
+                .v-btn {
+                    margin-right: 10px;
+                }
             }
         }
 
@@ -378,8 +383,8 @@ body {
     }
 
     .guide hr {
-        width: 95%;
-        transform: translateX(-15px);
+        width: 90%;
+        /* transform: translateX(-15px); */
     }
 }
 

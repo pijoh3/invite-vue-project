@@ -216,33 +216,38 @@
       </div>
       <ul class="guide">
         <li>
-            <v-btn icon="mdi-train" disabled data-aos="fade-up"/>
-            <span class="guide-text">
-              <p class="guide-title" data-aos="fade-up">지하철</p>
-              <p data-aos="fade-up">[3호선] 고속터미널역 5번 출구</p>
-              <p data-aos="fade-up">[9호선] 신반포역 4번 출구</p>
-              <p data-aos="fade-up">(반포종합운동장 방향 도보 7분)</p>
-            </span>
+          <span class="guide-text">
+            <p class="guide-title" data-aos="fade-up">
+              <v-btn icon="mdi-train" disabled data-aos="fade-up"/>
+              지하철
+            </p>
+            <p data-aos="fade-up">[<em style="color: orange;">❸</em>호선] 고속터미널역 5번 출구</p>
+            <p data-aos="fade-up">[<em style="color: burlywood;">❾</em>호선] 신반포역 4번 출구</p>
+            <p data-aos="fade-up">(반포종합운동장 방향 도보 7분)</p>
+          </span>
         </li>
         <hr data-aos="fade-up"/>
         <li>
-          <v-btn icon="mdi-bus" disabled data-aos="fade-up"/>
-            <span class="guide-text">
-              <p class="guide-title" data-aos="fade-up">버스</p>
-              <p data-aos="fade-up">간선 142</p>
-              <p data-aos="fade-up">마을 서초10 / 서초14 / 서초21</p>
-              <p data-aos="fade-up">(반포종합운동장 하차)</p>
-            </span>
+          <span class="guide-text">
+            <p class="guide-title" data-aos="fade-up">
+              <v-btn icon="mdi-bus" disabled data-aos="fade-up"/>
+              버스
+            </p>
+            <p data-aos="fade-up">간선 142</p>
+            <p data-aos="fade-up">마을 서초10 / 서초14 / 서초21</p>
+            <p data-aos="fade-up">(반포종합운동장 하차)</p>
+          </span>
         </li>
         <hr data-aos="fade-up"/>
         <li>
-          <v-btn icon="mdi-parking" disabled data-aos="fade-up"/>
-            <span class="guide-text">
-              <p class="guide-title" data-aos="fade-up">주차</p>
-              <p data-aos="fade-up">무료주차 2시간</p>
-              <p data-aos="fade-up">건물 내 만차시 외부 주차장 안내</p>
-              <p data-aos="fade-up">(도보 10분)</p>
-            </span>
+          <span class="guide-text">
+            <p class="guide-title" data-aos="fade-up"><v-btn icon="mdi-parking" disabled data-aos="fade-up"/>
+              주차
+            </p>
+            <p data-aos="fade-up">무료주차 2시간</p>
+            <p data-aos="fade-up">건물 내 만차시 외부 주차장 안내</p>
+            <p data-aos="fade-up">(도보 10분)</p>
+          </span>
         </li>
         <hr data-aos="fade-up"/>
       </ul>
@@ -256,7 +261,8 @@
         <div class="content">
           <p data-aos="fade-up">예식에 참석하기 어려운 분들을 위해</p>
           <p data-aos="fade-up">작은 피로연 자리를 마련하였습니다.</p>
-          <p data-aos="fade-up">고성대웅뷔페 4층</p>
+          <p data-aos="fade-up" style="font-weight: bold;">23년 11월 4일(토) 오후6시</p>
+          <p data-aos="fade-up" style="font-weight: bold;">고성대웅뷔페 4층</p>
           <p data-aos="fade-up">(경남고성군 동외리 156번길31)</p>
           <button class="event-btn" @click="moveEventMap" data-aos="fade-up">피로연장 지도보기</button>
         </div>
@@ -265,6 +271,11 @@
         <!-- Flowers Png vectors by Lovepik.com -->
         <h1><img class="icon" src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/flower.png" />마음 전하실 곳</h1>
         <div class="accordion">
+          <AccordionItem>
+            <template #summary>신랑측 계좌번호</template>
+            <template #icon>></template>
+            
+          </AccordionItem>
           <v-expansion-panels>
             <v-expansion-panel title="신랑측 계좌번호">
               <v-expansion-panel-text>
