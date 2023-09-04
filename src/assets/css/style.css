@@ -12,6 +12,18 @@ body > div {
     overflow-x: hidden;
 }
 
+.volume {
+    position: fixed;
+    top:15px;
+    right:15px;
+    z-index: 50;
+    color: var(--gray);
+
+    .volume-frame {
+        display: none;
+    }
+}
+
 .container {
     position: relative;
     width: 100%;

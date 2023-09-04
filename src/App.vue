@@ -1,5 +1,12 @@
 <template>
   <div>
+    <div class="volume">
+      <audio src="audio/Yael Kareth - A Farewell to Love Elgar.mp3" loop autoplay ref="volumeRef" >
+      </audio>
+      <span class="material-icons" @click="toggleVolume">
+        {{ volume?"volume_up":"volume_off"}}
+      </span>
+    </div>
   <!-- page-1 메인페이지 -->
     <div class="container main">
       <div class="header">
@@ -353,6 +360,7 @@ import {ref, nextTick, onMounted} from "vue"
 import ImagePopup from "@/components/ImagePopup.vue"
 import { AccordionList, AccordionItem } from "vue3-rich-accordion";
 import "vue3-rich-accordion/accordion-library-styles.css";
+import { watch } from "vue"
 
 // sakura.js(벚꽃 효과)
 new Sakura('body')
@@ -429,6 +437,17 @@ const shareLink = () => !!navigator.share({
   title:"병진♥유진 결혼식에 초대합니다."})
     .then(()=>alert("해당 링크를 공유하였습니다."))
     .catch((error)=>alert("해당 링크 공유에 실패하였습니다."))
+
+// 볼륨 on/off 기능
+const volume = ref(true)
+const volumeRef = ref(null)
+// on/off 제어
+const toggleVolume = () => {
+  volume.value = !volume.value
+  volumeRef.value.muted = volume.value? false:true
+}
+
+
 </script>
 
 <style>

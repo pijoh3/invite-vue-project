@@ -9,7 +9,7 @@
     left: 0;
     top: 0;
     background-color: var(--black);
-    z-index: 2;
+    z-index: 200;
 
     .header{
         width:100%;
