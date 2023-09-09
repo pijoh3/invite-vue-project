@@ -212,10 +212,10 @@
               <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/26.jpg" data-aos="fade-up" @click="open(24)"/>
           </div>
           <div class="grid-item">
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/24.jpg" data-aos="fade-up" @click="open(25)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/24.jpg" style="height: 13.9rem;" data-aos="fade-up" @click="open(25)"/>
           </div>
           <div class="grid-item">
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/25.jpg" style="height: 220px;" data-aos="fade-up" @click="open(26)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/25.jpg" style="height: 13.9rem;" data-aos="fade-up" @click="open(26)"/>
           </div>
         </template>
       </div>
@@ -367,7 +367,7 @@
           <li class="list division" @click="sendKakao">
             <button class="kakao"></button>카카오톡 공유하기
           </li>
-          <li class="list" @click="shareLink" style="line-height: 27px;">
+          <li class="list" @click="shareLink" style="line-height: 2rem;">
             <v-icon icon="mdi-share-variant" color="#757575" class="link" />링크 공유하기
           </li>
         </ul>

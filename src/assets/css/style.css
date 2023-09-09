@@ -555,8 +555,8 @@ body > div {
                     margin-right: 10px;
                     background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/kakaoTalk.png');
                     background-size: cover;
-                    width: 20px;
-                    height: 20px;
+                    width: 22px;
+                    height: 22px;
                 }
 
                 .link {
@@ -578,16 +578,16 @@ body > div {
                     margin-right: 10px;
                     background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/github.png');
                     background-size: cover;
-                    width: 20px;
-                    height: 20px;
+                    width: 22px;
+                    height: 22px;
                 }
 
                 .blog {
                     margin-right: 10px;
                     background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/blog.png');
                     background-size: cover;
-                    width: 20px;
-                    height: 20px;
+                    width: 22px;
+                    height: 22px;
                 }
             }
         }

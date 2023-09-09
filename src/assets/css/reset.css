@@ -46,3 +46,8 @@ textarea {
     padding: 0;
     border: 0 none;
 }
+
+.accordion-list .accordion-item>.accordion-item__summary>.accordion-item__summary-icon--default::before{
+    content: none !important;
+    line-height: 0 !important;
+}
