@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="volume">
-      <audio src="audio/Yael Kareth - A Farewell to Love Elgar.mp3" loop autoplay ref="volumeRef" >
+      <audio src="audio/이석훈-그대를 사랑하는 10가지 이유(Piano Cover).mp3" loop ref="volumeRef" >
       </audio>
       <span class="material-icons" @click="toggleVolume">
         {{ volume?"volume_up":"volume_off"}}
@@ -211,12 +211,14 @@
         <!-- 네이버 지도 연동부분 -->
         <div id="map"  style="width: 100%; height: 300px; margin:auto"></div>
         <div class="map-navbar">
-          <a class="navbar-item bar" href="https://map.naver.com/p/search/%EB%8D%94%EC%BB%A8%EB%B2%A4%EC%85%98%20%EB%B0%98%ED%8F%AC/place/1831004045?c=15.00,0,0,0,dh&isCorrectAnswer=true">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/naver.webp">네이버 지도
+          <a class="navbar-item" href="https://map.naver.com/p/search/%EB%8D%94%EC%BB%A8%EB%B2%A4%EC%85%98%20%EB%B0%98%ED%8F%AC/place/1831004045?c=15.00,0,0,0,dh&isCorrectAnswer=true">
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/naver.webp">네이버
           </a>
+          <span class="division">|</span>
           <a class="navbar-item bar" href="https://map.kakao.com/link/map/더컨벤션반포점,37.49846066693337,126.99587826519081">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/kakao.svg">카카오맵
           </a>
+          <span class="division">|</span>
           <a class="navbar-item" href="https://surl.tmobiapi.com/4e182bea">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/tmap.svg">티맵
           </a>
@@ -335,12 +337,20 @@
         </div>
       </div>
       <div class="share">
-        <ul>
-          <li class="kakao">
-            <button class="kakao-btn" @click="sendKakao"></button><span>카카오톡 공유하기</span>
+        <ul class="share-list">
+          <li class="list division" @click="sendKakao">
+            <button class="kakao"></button>카카오톡 공유하기
           </li>
-          <li class="link">
-            <v-btn icon="mdi-share-variant" color="#757575" class="link-btn" @click="shareLink"/><span>링크 복사하기</span>
+          <li class="list" @click="shareLink">
+            <v-icon icon="mdi-share-variant" color="#757575" class="link" /><span>링크 공유하기</span>
+          </li>
+        </ul>
+        <ul class="link-list">
+          <li class="list division" @click="movePage('https://github.com/pijoh3/invite-vue-project')">
+            <button class="github"></button>모바일 청첩장 github
+          </li>
+          <li class="list" @click="movePage('https://codeup-eugene.tistory.com/category/%EC%9D%BC%EC%83%81/%EA%B2%B0%ED%98%BC%EC%A4%80%EB%B9%84')">
+            <button class="blog"></button>Eugene's blog
           </li>
         </ul>
       </div>
@@ -360,7 +370,6 @@ import {ref, nextTick, onMounted} from "vue"
 import ImagePopup from "@/components/ImagePopup.vue"
 import { AccordionList, AccordionItem } from "vue3-rich-accordion";
 import "vue3-rich-accordion/accordion-library-styles.css";
-import { watch } from "vue"
 
 // sakura.js(벚꽃 효과)
 new Sakura('body')
@@ -386,6 +395,7 @@ onMounted(() => {
       map: map
     })
   }
+
 })
 
 // 더보기 버튼 클릭
@@ -438,15 +448,18 @@ const shareLink = () => !!navigator.share({
     .then(()=>alert("해당 링크를 공유하였습니다."))
     .catch((error)=>alert("해당 링크 공유에 실패하였습니다."))
 
+// 링크 주소 이동
+const movePage = href => window.location.href = href
+
 // 볼륨 on/off 기능
-const volume = ref(true)
+const volume = ref(false)
 const volumeRef = ref(null)
 // on/off 제어
 const toggleVolume = () => {
   volume.value = !volume.value
+  if(volume.value)volumeRef.value.play()
   volumeRef.value.muted = volume.value? false:true
 }
-
 
 </script>
 
