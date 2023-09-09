@@ -196,26 +196,20 @@
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/18.jpg" data-aos="fade-up" @click="open(18)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up" @click="open(19)"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg" data-aos="fade-up" @click="open(19)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg" data-aos="fade-up" @click="open(20)"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg" data-aos="fade-up" @click="open(20)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg" data-aos="fade-up" @click="open(21)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/23.jpg" data-aos="fade-up" @click="open(21)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/26.jpg" data-aos="fade-up" @click="open(22)"/>
           </div>
           <div class="grid-item">
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/22.jpg" data-aos="fade-up" @click="open(22)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/24.jpg" style="height: 13.9rem;" data-aos="fade-up" @click="open(23)"/>
           </div>
           <div class="grid-item">
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/23.jpg" data-aos="fade-up" @click="open(23)"/>
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/26.jpg" data-aos="fade-up" @click="open(24)"/>
-          </div>
-          <div class="grid-item">
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/24.jpg" style="height: 13.9rem;" data-aos="fade-up" @click="open(25)"/>
-          </div>
-          <div class="grid-item">
-              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/25.jpg" style="height: 13.9rem;" data-aos="fade-up" @click="open(26)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/25.jpg" style="height: 13.9rem;" data-aos="fade-up" @click="open(24)"/>
           </div>
         </template>
       </div>
