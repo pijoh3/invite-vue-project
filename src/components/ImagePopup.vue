@@ -73,7 +73,13 @@ const src = ref(["https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg",
     "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/18.jpg",
     "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg",
     "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg",
-    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg"])
+    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg",
+    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/22.jpg",
+    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/23.jpg",
+    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/26.jpg",
+    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/24.jpg",
+    "https://cdn.jsdelivr.net/gh/pijoh3/invite-image/25.jpg",
+])
 
 // 현재 인덱스인 경우 acitve
 const activeClass = computed(()=> index => index === _modelValue.value?"active":"")

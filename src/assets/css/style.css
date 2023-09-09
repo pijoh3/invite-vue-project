@@ -45,8 +45,9 @@ body > div {
 
     .body {
         height: 420px;
-        background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg');
+        background: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg') no-repeat;
         background-size: cover;
+        background-position: 50% 90%;
     }
 
     .body h1 {
@@ -70,6 +71,21 @@ body > div {
     .footer p {
         margin: 0 0 0 0;
     }
+}
+
+/* 0909 추가 페이지 - 시 */
+.poem {
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+    .message {
+        font-size: 18px;
+        font-family: var(--gowun-batang);
+    }
+}
+
+.poem > img {
+    width: 30%;
 }
 
 /* page-2 초대문구 */
@@ -539,13 +555,13 @@ body > div {
                     margin-right: 10px;
                     background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/kakaoTalk.png');
                     background-size: cover;
-                    width: 15px;
-                    height: 15px;
+                    width: 20px;
+                    height: 20px;
                 }
 
                 .link {
                     margin-right: 10px;
-                    align-items: center;
+                    text-decoration: none !important;
                 }
             }
         }
@@ -562,16 +578,16 @@ body > div {
                     margin-right: 10px;
                     background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/github.png');
                     background-size: cover;
-                    width: 15px;
-                    height: 15px;
+                    width: 20px;
+                    height: 20px;
                 }
 
                 .blog {
                     margin-right: 10px;
                     background-image: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/blog.png');
                     background-size: cover;
-                    width: 15px;
-                    height: 15px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }

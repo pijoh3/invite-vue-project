@@ -21,10 +21,24 @@
         <p>더 컨벤션 반포 2F 그랜드볼룸홀</p>
       </div>
     </div>
+    <!-- 0909 추가 페이지 - 시 -->
+    <div class="container poem" data-aos="fade-up">
+      <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/poem.jpg" >
+       <div class="message">
+          <p data-aos="fade-up">그대를 보았다.</p>
+          <p data-aos="fade-up" style="margin-bottom: 40px;">그대가 웃었다.</p>
+          <p data-aos="fade-up">아름다운 그대 두 눈에</p>
+          <p data-aos="fade-up" style="margin-bottom: 40px;">내가 담겼다.</p>
+          <p data-aos="fade-up">그 모습이 좋아</p>
+          <p data-aos="fade-up">그렇게 한참을 가만히 앉아</p>
+          <p data-aos="fade-up" style="margin-bottom: 40px;">그대를 담았다.</p>
+          <p data-aos="fade-up">웃음, 이정선</p>
+      </div>
+    </div>
     <!-- page-2 초대문구 -->
     <div class="container invite-text">
       <div class="content">
-        <hr>
+        <hr data-aos="fade-up">
         <h1 data-aos="fade-up">" 초대합니다 "</h1>
         <div class="message">
           <span>
@@ -184,11 +198,24 @@
           <div class="grid-item">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/19.jpg" data-aos="fade-up" @click="open(19)"/>
           </div>
-            <div class="grid-item">
+          <div class="grid-item">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/20.jpg" data-aos="fade-up" @click="open(20)"/>
           </div>
-            <div class="grid-item">
+          <div class="grid-item">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/21.jpg" data-aos="fade-up" @click="open(21)"/>
+          </div>
+          <div class="grid-item">
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/22.jpg" data-aos="fade-up" @click="open(22)"/>
+          </div>
+          <div class="grid-item">
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/23.jpg" data-aos="fade-up" @click="open(23)"/>
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/26.jpg" data-aos="fade-up" @click="open(24)"/>
+          </div>
+          <div class="grid-item">
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/24.jpg" data-aos="fade-up" @click="open(25)"/>
+          </div>
+          <div class="grid-item">
+              <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/25.jpg" style="height: 220px;" data-aos="fade-up" @click="open(26)"/>
           </div>
         </template>
       </div>
@@ -340,8 +367,8 @@
           <li class="list division" @click="sendKakao">
             <button class="kakao"></button>카카오톡 공유하기
           </li>
-          <li class="list" @click="shareLink">
-            <v-icon icon="mdi-share-variant" color="#757575" class="link" /><span>링크 공유하기</span>
+          <li class="list" @click="shareLink" style="line-height: 27px;">
+            <v-icon icon="mdi-share-variant" color="#757575" class="link" />링크 공유하기
           </li>
         </ul>
         <ul class="link-list">
@@ -424,7 +451,11 @@ const copyAccount = account => {
   if(navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(account)
     .then(()=>alert("계좌번호가 복사되었습니다."))
-    .catch((error)=>alert("계좌번호 복사에 실패하였습니다."))
+    .catch((error)=>{
+      window.clipboardData.setData("text/plain",account)
+        .then(()=> alert("계좌번호가 복사되었습니다."))
+        .catch(()=>alert("계좌번호 복사에 실패하였습니다."))
+    })
   }
   // navigator 존재하지 않을 경우 
   else {
