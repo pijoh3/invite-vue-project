@@ -286,7 +286,6 @@
             <AccordionItem default-opened>
               <template #summary>신랑측 계좌번호</template>
               <template #icon>
-                <em style="display: none;">|</em>
                 <v-icon icon="mdi-chevron-down" />
               </template>
               <div class="account-info">
@@ -309,7 +308,7 @@
           <AccordionList>
             <AccordionItem default-opened>
               <template #summary>신부측 계좌번호</template>
-              <template #icon><em style="display: none;">|</em>
+              <template #icon>
                 <v-icon icon="mdi-chevron-down" />
               </template>
                 <div class="account-info">
@@ -395,7 +394,9 @@ onMounted(() => {
       map: map
     })
   }
-
+  // ios 스타일 이슈
+  const accordion = document.getElementsByClassName('accordion-item__summary-icon')
+  Array.from(accordion).forEach(data=>data.classList.remove('accordion-item__summary-icon--default'))
 })
 
 // 더보기 버튼 클릭
@@ -419,7 +420,33 @@ const idx = ref(0)
 const moveEventMap = () => window.location.href = "https://map.naver.com/p/search/%EA%B3%A0%EC%84%B1%EB%8C%80%EC%9B%85%EC%98%88%EC%8B%9D%EC%9E%A5/place/13352789?c=15.00,0,0,0,dh&isCorrectAnswer=true"
 
 // 계좌 복사 함수
-const copyAccount = account => navigator.clipboard.writeText(account).then(()=>alert("계좌번호가 복사되었습니다."))
+const copyAccount = account => {
+  if(navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(account)
+    .then(()=>alert("계좌번호가 복사되었습니다."))
+    .catch((error)=>alert("계좌번호 복사에 실패하였습니다."))
+  }
+  // navigator 존재하지 않을 경우 
+  else {
+    const textArea = document.createElement("textarea");
+    textArea.value = account;
+
+    // Move textarea out of the viewport so it's not visible
+    textArea.style.position = "absolute";
+    textArea.style.left = "-999999px";
+
+    document.body.prepend(textArea);
+    textArea.select();
+
+    try {
+      document.execCommand('copy');
+    } catch (error) {
+      console.error(error);
+    } finally {
+      textArea.remove();
+    }
+  }
+}
 
 // 카카오 공유하기
 // init 체크
@@ -431,7 +458,7 @@ var sendKakao = function () {
   // 메시지 공유 함수
   window.Kakao.Link.sendScrap({
     requestUrl: 'http://pijoh3.github.io', // 페이지 url
-    templateId: 98011, // 메시지템플릿 번호
+     // 메시지템플릿 번호
     templateArgs: {
       PROFILE: 'https://cdn.jsdelivr.net/gh/pijoh3/invite-image/8.jpg', // 프로필 이미지 주소 ${PROFILE}
       THUMB: 'http://pijoh3.github.io', // 썸네일 주소 ${THUMB}
