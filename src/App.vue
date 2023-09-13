@@ -44,7 +44,7 @@
           <span>
             <p data-aos="fade-up">저희 두 사람이 사랑과 믿음으로</p>
             <p data-aos="fade-up">한 가정을 이루게 되었습니다.</p>
-            <p data-aos="fade-up">바쁘시더라도 부디 오셔서</p>
+            <p data-aos="fade-up">바쁘시더라도 오셔서</p>
             <p data-aos="fade-up">저희의 앞날을 축복해 주시고</p>
             <p data-aos="fade-up">격려해 주시면</p>
             <p data-aos="fade-up">더없는 기쁨이 되겠습니다.</p>
@@ -177,7 +177,7 @@
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/10.jpg" data-aos="fade-up" @click="open(11)"/>
           </div>
           <div class="grid-item">
-            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/13.jpg" data-aos="fade-up" @click="open(12)"/>
+            <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/22.jpg" data-aos="fade-up" @click="open(12)"/>
           </div>
           <div class="grid-item">
             <img src="https://cdn.jsdelivr.net/gh/pijoh3/invite-image/14.jpg" data-aos="fade-up" @click="open(13)"/>
@@ -255,6 +255,7 @@
             <p data-aos="fade-up">[<em style="color: orange;">❸</em>호선] 고속터미널역 5번 출구</p>
             <p data-aos="fade-up">[<em style="color: burlywood;">❾</em>호선] 신반포역 4번 출구</p>
             <p data-aos="fade-up">(반포종합운동장 방향 도보 7분)</p>
+            <p data-aos="fade-up" style="font-size: 13px; font-weight: bold;">※셔틀버스 운행 - 신반포역 4번출구 앞에서 탑승</p>
           </span>
         </li>
         <hr data-aos="fade-up"/>
@@ -424,7 +425,7 @@ onMounted(() => {
 const isShow = ref(false)
 const showMore = () => {
   isShow.value = !isShow.value
-  nextTick(()=> window.scrollTo({ top: document.documentElement.scrollTop+700, behavior: "smooth" }))
+  // nextTick(()=> window.scrollTo({ top: document.documentElement.scrollTop+700, behavior: "smooth" }))
 }
 
 // 이미지 상세보기 팝업
