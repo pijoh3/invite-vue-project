@@ -394,7 +394,7 @@ import dayjs from "dayjs"
 import 'dayjs/locale/ko'
 import "sakura-js/dist/sakura.min.css"
 import {Sakura} from "@/script/sakura.js" 
-import {ref, nextTick, onMounted} from "vue"
+import {ref, onMounted} from "vue"
 import ImagePopup from "@/components/ImagePopup.vue"
 import { AccordionList, AccordionItem } from "vue3-rich-accordion";
 import "vue3-rich-accordion/accordion-library-styles.css";

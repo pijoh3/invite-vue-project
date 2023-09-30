@@ -47,6 +47,7 @@ body > div {
         height: 420px;
         background: url('https://cdn.jsdelivr.net/gh/pijoh3/invite-image/1.jpg') no-repeat;
         background-size: cover;
+        -webkit-background-size: cover;
         background-position: 50% 90%;
     }
 
