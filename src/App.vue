@@ -323,6 +323,13 @@
                 </p>
                 <p><em>신랑 아버님</em> 박 우 범</p>
               </div>
+              <hr/>
+              <div class="account-info">
+                <p>농협 | 849-12-181365
+                  <button class="copy-btn" @click="copyAccount('84912181365')"><v-icon icon="mdi-content-copy" /></button>
+                </p>
+                <p><em>신랑 어머님</em> 이 정 순</p>
+              </div>
             </AccordionItem>
           </AccordionList>
         
